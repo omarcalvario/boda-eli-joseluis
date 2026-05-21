@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="col-lg-6 order-lg-first position-relative">
-                    <img src="images/the-couple-hero.jpg" alt="Los Novios" class="img-fluid rounded">
+                    <img src="img/the-couple-hero.jpg" alt="Los Novios" class="img-fluid rounded">
                 </div>
 
             </div>
@@ -384,35 +384,57 @@
                             ¿Confirmas tu asistencia?
                         </h3>
 
-                        <form action="rsvp.php" method="post" class="mt-4">
+                        <form action="rsvp.php" method="post" class="bg-white p-4 position-relative">
+                            <div class="row">
+                                <div class="col-12 mb-3 position-relative">
+                                    <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required" class="border-0 border-bottom p-3 w-100" placeholder="Nombre completo">
+                                </div>
+                                <!-- //.col-12 -->
 
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Tu nombre completo">
+                                <div class="col-12 mb-3 position-relative">
+                                    <input type="email" name="rsvp_email" id="rsvp-email" data-rules="email" class="border-0 border-bottom p-3 w-100" placeholder="Tu dirección de correo">
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-3 position-relative">
+                                    <select name="rsvp_guests" id="rsvp-guests" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                        <option value="">Numero de invitados</option>
+                                        <option value="1 Guest">1 Invitado</option>
+                                        <option value="2 Guests">2 Invitados</option>
+                                        <option value="3 Guests">3 Invitados</option>
+                                    </select>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-3 position-relative">
+                                    <select name="rsvp_events" id="rsvp-events" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                        <option value="">¿A qué vas a asistir?</option>
+                                        <option value="Reception &amp; Ceremony">Recepción &amp; Ceremonia</option>
+                                        <option value="Reception Only">Sólo Recepción</option>
+                                        <option value="Ceremony Only">Sólo Ceremonia</option>
+                                        <option value="Sory, Can't Make Either">Lo siento, no puedo ir a ninguno de los dos</option>
+                                    </select>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-4 position-relative">
+                                    <textarea name="rsvp_message" id="rsvp-message" class="border-0 border-bottom p-3 w-100" rows="4" placeholder="Restricciones alimentarias"></textarea>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn mx-auto">
+                                        <span>Enviar</span>
+                                    </button>
+                                </div>
+                                <!-- //.col-12 -->
                             </div>
+                            <!-- //.row -->
 
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Tu correo electrónico">
-                            </div>
-
-                            <div class="mb-3">
-                                <select class="form-control">
-                                    <option>Número de invitados</option>
-                                    <option>1 invitado</option>
-                                    <option>2 invitados</option>
-                                    <option>3 invitados</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-4">
-                                <textarea class="form-control" rows="4" placeholder="Mensaje o restricciones alimenticias"></textarea>
-                            </div>
-
-                            <button type="submit" class="btn mx-auto d-block">
-                                <span>Confirmar Asistencia</span>
-                            </button>
-
+                            <!-- SVG Image -->
+                            <img src="img/shape-heart-balloon-mrs.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block position-absolute start-0 z-2">
+                            <img src="img/shape-heart-balloon-mr.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block end-0 position-absolute translate-middle-y z-2">
                         </form>
-
                     </div>
                 </div>
 
@@ -438,7 +460,7 @@
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <img src="images/the-couple-rsvp.jpg" alt="" class="img-fluid">
+                    <img src="img/instagram.png" alt="" class="img-fluid">
                 </div>
 
             </div>
