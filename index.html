@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en" class="h-100 w-100">
+
+<head>
+    <title>Loise - Responsive Wedding Invitation</title>
+
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Required CSS files -->
+    <link href="css/style.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<body id="page-top" class="h-100 overflow-x-hidden w-100">
+
+    <!-- Preloader Start -->
+    <div class="preloader bg-white h-100 position-fixed w-100">
+        <svg width="100px" height="100px" viewBox="0 0 100 100" y="0px" x="0px" class="position-absolute start-50 top-50 translate-middle">
+            <g>
+                <path class="anim-heart" d="M89.49,37.8c0,25.54-39.59,46.24-39.59,46.24S10.31,63.34,10.31,37.8c0-29.59,39.59-28.67,39.59,0C49.9,10.06,89.49,8.21,89.49,37.8 z" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.5" stroke="#000000" fill="#DDB796"></path>
+                <path class="anim-heart-sm" d="M89.63,70.9c-3.57,10.15-22.21,12.84-22.21,12.84s-12.84-13.77-9.26-23.92c4.14-11.76,19.75-5.86,15.74,5.54 C77.78,54.33,93.78,59.13,89.63,70.9z" stroke-miterlimit="10" stroke-linejoin="round" stroke-linecap="round" stroke-width="3.5" stroke="#000000" fill="#B46A48"></path>
+            </g>
+        </svg>
+    </div>
+    <!-- Preloader End -->
+
+
+    <!-- Header Start -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container">
+                <!-- Navbar brand (mobile) -->
+                <div class="navbar-brand align-items-center d-flex d-lg-none me-0">
+                    <img width="187" height="73" src="img/navbar-brand-mobile.png" alt="Logo">
+                </div>
+
+                <!-- Navbar toggler -->
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar menu -->
+                <div id="navbar" class="collapse navbar-collapse justify-content-lg-center">
+                    <ul class="navbar-nav pt-3 pt-lg-0">
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#the-couple">The Couple</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#wedding-event">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#love-story">Love Story</a>
+                        </li>
+                    </ul>
+
+                    <!-- Navbar brand (desktop) -->
+                    <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-4 position-relative text-center">
+                        <img width="180" height="123" src="img/navbar-brand.png" alt="Logo" class="mt-4 position-absolute start-0 top-0">
+                    </div>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#photos">Photos</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link page-scroll" href="#wedding-gifts">Wedding Gifts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="#rsvp">RSVP</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //.collapse -->
+            </div>
+            <!-- //.container -->
+        </nav>
+    </header>
+    <!-- Header End -->
+
+
+    <!-- Spacer -->
+    <span class="spacer d-block w-100"></span>
+
+
+    <!-- Section - Hero Start -->
+    <section id="hero" class="bg-secondary-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 position-relative text-center z-2">
+                    <div class="border border-2 border-primary d-inline-block mb-4 px-4 py-2">
+                        <h2 class="font-alt fs-1 m-0 text-primary">Loise & Wilson</h2>
+                    </div>
+                    <!-- //.border -->
+
+                    <h3 class="fs-1 font-alt mb-3">Together with Their Families</h3>
+                    <p class="lead mb-5 text-body-secondary">Request The Honor of Your Presence at Their Wedding Ceremony and Reception July 11, 2026</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-lg-6 -->
+
+                <div class="col-lg-6 order-lg-first position-relative">
+                    <div class="row justify-content-center justify-content-lg-start">
+                        <div class="col-12 col-sm-10 col-md-8 col-lg-9">
+                            <div class="position-relative z-2">
+                                <svg width="100%" height="100%" viewBox="0 0 500 685" xmlns="http://www.w3.org/2000/svg" class="position-relative z-2">
+                                    <defs>
+                                        <clipPath id="clip-path-hero" clipPathUnits="userSpaceOnUse">
+                                            <path d="M165.836,1644.64C94.328,1209.04 90.753,779.697 165.349,357.564C180.459,272.058 246.591,204.825 331.662,187.446C599.258,132.777 869.097,133.687 1141.07,187.523C1228.32,204.794 1295.77,274.608 1309.15,362.538C1375.85,800.802 1379.67,1230.03 1311.42,1648.91C1297.09,1736.89 1228.64,1806.34 1140.92,1822.2C881.395,1869.15 613.861,1865.59 339.554,1819.32C250.208,1804.25 180.513,1734.05 165.836,1644.64Z" transform="matrix(0.399961,0,0,0.399961,-44.3128,-58.0804)" />
+                                        </clipPath>
+                                    </defs>
+
+                                    <foreignObject clip-path="url(#clip-path-hero)" width="100%" height="100%">
+                                        <img src="images/the-couple-hero.jpg" alt="The Couple" class="anim-zoom">
+                                    </foreignObject>
+                                </svg>
+
+                                <!-- SVG Image -->
+                                <img src="img/shape-particle.svg" alt="" class="shape-particle end-0 position-absolute top-0 z-3">
+                                <img src="img/shape-rect-the-couple-1.svg" alt="" class="shape-rect shape-rect-lg bottom-0 end-0 position-absolute z-1">
+                            </div>
+                            <!-- //.position-relative -->
+                        </div>
+                        <!-- //.col-12 -->
+                    </div>
+                    <!-- //.row -->
+
+                    <!-- SVG Image -->
+                    <img src="img/shape-rect-the-couple-3.svg" alt="" class="shape-rect d-md-none d-lg-block position-absolute start-0 top-0 z-1">
+                </div>
+                <!-- //.col-lg-6 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-wave-top-right.svg" alt="" class="shape-wave d-none d-lg-block end-0 position-absolute top-0 z-1">
+        <img src="img/shape-wave-bottom-right-1.svg" alt="" class="shape-wave shape-wave-xl bottom-0 d-none d-lg-block end-0 position-absolute z-1">
+    </section>
+    <!-- Section - Hero End -->
+
+
+    <!-- Section - The Couple Start -->
+    <section id="the-couple">
+        <div class="container position-relative z-2">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">The Happy Couple</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">A happy marriage is the union of two good forgivers.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row align-items-center gx-xl-5 justify-content-center">
+                <div class="col-10 col-md-8 col-lg-5 col-xl-3 mb-5 mb-xl-0 text-center">
+                    <h3 class="font-alt">Jane Loise</h3>
+                    <p class="text-body-secondary">I am just crazy about Wilson. He has a truly amazing heart.</p>
+                </div>
+                <!-- //.col-10 -->
+
+                <div class="col-10 col-md-8 col-xl-6 mb-5 mb-xl-0">
+                    <div class="position-relative z-2">
+                        <svg width="100%" height="100%" viewBox="0 0 624 456" xmlns="http://www.w3.org/2000/svg" class="position-relative z-2">
+                            <defs>
+                                <clipPath id="clip-path-the-couple" clipPathUnits="userSpaceOnUse">
+                                    <path d="M122.297,1714.66C65.338,1367.69 62.491,1025.7 121.909,689.455C133.944,621.346 186.621,567.793 254.384,553.949C467.534,510.404 682.471,511.129 899.109,554.011C968.605,567.767 1022.33,623.377 1032.99,693.417C1086.12,1042.51 1089.16,1384.41 1034.8,1718.06C1023.38,1788.14 968.865,1843.46 898.991,1856.1C692.267,1893.49 479.166,1890.66 260.67,1853.8C189.503,1841.8 133.988,1785.88 122.297,1714.66Z" transform="matrix(2.80689e-17,-0.457937,0.4584,2.80405e-17,-239.087,491.927)" />
+                                </clipPath>
+                            </defs>
+
+                            <foreignObject clip-path="url(#clip-path-the-couple)" width="100%" height="100%">
+                                <img src="images/the-couple.jpg" alt="The Couple">
+                            </foreignObject>
+                        </svg>
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-particle.svg" alt="" class="shape-particle d-none d-md-block position-absolute start-0 top-0 z-3">
+                        <img src="img/shape-heart-balloon-mrs.svg" alt="" class="shape-heart-balloon mt-4 position-absolute start-0 top-50 translate-middle-y z-2">
+                        <img src="img/shape-heart-balloon-mr.svg" alt="" class="shape-heart-balloon end-0 position-absolute top-50 translate-middle-y z-2">
+                    </div>
+                    <!-- //.position-relative -->
+                </div>
+                <!-- //.col-10 -->
+
+                <div class="col-10 col-md-8 col-lg-5 col-xl-3 text-center">
+                    <h3 class="font-alt">John Wilson</h3>
+                    <p class="text-body-secondary">I'm so excited to spend the rest of my life with You, Loise.</p>
+                </div>
+                <!-- //.col-10 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-wave-top-left-1.svg" alt="" class="shape-wave shape-wave-sm d-none d-lg-block mt-5 position-absolute start-0 top-0 z-1">
+        <img src="img/shape-wave-bottom-right-2.svg" alt="" class="shape-wave bottom-0 d-none d-lg-block end-0 position-absolute z-1">
+    </section>
+    <!-- Section - The Couple End -->
+
+
+    <!-- Section - Wedding Event Start -->
+    <section id="wedding-event" class="bg-secondary-2">
+        <div class="container position-relative z-2">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">The Wedding Event</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">If you have only one smile in you give it to the people you love.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row gx-lg-5 justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 mb-5 mb-xl-0">
+                    <div class="position-relative">
+                        <div class="d-flex flex-column h-100 justify-content-between position-absolute start-0 text-center top-0 w-100">
+                            <div class="mt-5 px-4">
+                                <h3 class="font-alt">The Reception</h3>
+                                <span class="divider divider-heart mb-3 mb-sm-4"></span>
+                                <p class="mb-1 text-body-secondary">Saturday, July 11th, 2026</p>
+                                <p class="text-body-secondary">08:00PM - 10:00PM</p>
+                                <p class="mb-1 text-body-secondary">St. Patrick's Catholic Church</p>
+                                <p class="mb-sm-4 text-body-secondary">619 10th Street NW, Washington, DC</p>
+                                <span class="divider divider-floral d-none d-sm-block"></span>
+                            </div>
+                            <!-- //.mt-5 -->
+
+                            <a href="#" target="_blank" class="btn mx-auto">
+                                <span>See Location</span>
+                            </a>
+                        </div>
+                        <!-- //.d-flex -->
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-rect-wedding-event-1.svg" alt="" class="img-fluid">
+                    </div>
+                    <!-- //.position-relative -->
+                </div>
+                <!-- //.col-12 -->
+
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 mb-5 mb-xl-0 mt-xl-5">
+                    <div class="position-relative">
+                        <div class="d-flex flex-column h-100 justify-content-between position-absolute start-0 text-center top-0 w-100">
+                            <div class="mt-5 px-4">
+                                <h3 class="font-alt">The Ceremony</h3>
+                                <span class="divider divider-heart mb-3 mb-sm-4"></span>
+                                <p class="mb-1 text-body-secondary">Sunday, July 12th, 2026</p>
+                                <p class="text-body-secondary">08:00PM - 10:00PM</p>
+                                <p class="mb-1 text-body-secondary">The Mayflower Hotel</p>
+                                <p class="mb-sm-4 text-body-secondary">620 11th Street NW, Washington, DC</p>
+                                <span class="divider divider-floral d-none d-sm-block"></span>
+                            </div>
+                            <!-- //.mt-5 -->
+
+                            <a href="#" target="_blank" class="btn mx-auto">
+                                <span>See Location</span>
+                            </a>
+                        </div>
+                        <!-- //.d-flex -->
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-rect-wedding-event-2.svg" alt="" class="img-fluid">
+                    </div>
+                    <!-- //.position-relative -->
+                </div>
+                <!-- //.col-12 -->
+
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                    <div class="position-relative">
+                        <div class="d-flex flex-column h-100 justify-content-between position-absolute start-0 text-center top-0 w-100">
+                            <div class="mt-5 px-4">
+                                <h3 class="font-alt">After Party</h3>
+                                <span class="divider divider-heart mb-3 mb-sm-4"></span>
+                                <p class="mb-1 text-body-secondary">Sunday, July 12th, 2026</p>
+                                <p class="text-body-secondary">08:00PM - 10:00PM</p>
+                                <p class="mb-1 text-body-secondary">The Mayflower Hotel</p>
+                                <p class="mb-sm-4 text-body-secondary">620 11th Street NW, Washington, DC</p>
+                                <span class="divider divider-floral d-none d-sm-block"></span>
+                            </div>
+                            <!-- //.mt-5 -->
+
+                            <a href="#" target="_blank" class="btn mx-auto">
+                                <span>See Location</span>
+                            </a>
+                        </div>
+                        <!-- //.d-flex -->
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-rect-wedding-event-1.svg" alt="" class="img-fluid">
+                    </div>
+                    <!-- //.position-relative -->
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-rect-middle-left.svg" alt="" class="shape-events shape-rect shape-rect-lg d-none d-lg-block position-absolute start-0 top-50 translate-middle z-1">
+        <img src="img/shape-wave-bottom-right-3.svg" alt="" class="shape-wave shape-wave-lg bottom-0 d-none d-lg-block end-0 position-absolute z-1">
+    </section>
+    <!-- Section - Wedding Event End -->
+
+
+    <!-- Section - Wedding Party Start -->
+    <section id="wedding-party">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">The Wedding Party</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">The highest happiness on earth is the happiness of marriage.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row gx-lg-5 justify-content-center">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 mb-5 mb-lg-0 text-center">
+                    <div class="position-relative mb-5">
+                        <svg width="100%" height="100%" viewBox="0 0 624 456" xmlns="http://www.w3.org/2000/svg" class="position-relative z-2">
+                            <defs>
+                                <clipPath id="clip-path-wedding-party-1" clipPathUnits="userSpaceOnUse">
+                                    <path d="M122.297,1714.66C65.338,1367.69 62.491,1025.7 121.909,689.455C133.944,621.346 186.621,567.793 254.384,553.949C467.534,510.404 682.471,511.129 899.109,554.011C968.605,567.767 1022.33,623.377 1032.99,693.417C1086.12,1042.51 1089.16,1384.41 1034.8,1718.06C1023.38,1788.14 968.865,1843.46 898.991,1856.1C692.267,1893.49 479.166,1890.66 260.67,1853.8C189.503,1841.8 133.988,1785.88 122.297,1714.66Z" transform="matrix(2.80689e-17,-0.457937,0.4584,2.80405e-17,-239.087,491.927)" />
+                                </clipPath>
+                            </defs>
+
+                            <foreignObject clip-path="url(#clip-path-wedding-party-1)" width="100%" height="100%">
+                                <img src="images/wedding-party-1.jpg" alt="The Bride">
+                            </foreignObject>
+                        </svg>
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-particle.svg" alt="" class="shape-particle d-none d-md-block position-absolute start-0 top-0 z-3">
+                    </div>
+                    <!-- //.position-relative -->
+
+                    <h3 class="display-5 font-alt">Jane Loise</h3>
+                    <p class="fs-5 fw-bold ls-2 mb-5 text-primary text-uppercase">The Bride</p>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-5">
+                            <h3 class="font-alt">Myrtle Wilson</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Maid of Honor</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">Daisy Buchanan</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Bridesmaid</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">Jordan Baker</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Bridesmaid</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">Carey Mulligan</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Bridesmaid</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //.col-12 -->
+
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 text-center">
+                    <div class="position-relative mb-5">
+                        <svg width="100%" height="100%" viewBox="0 0 624 456" xmlns="http://www.w3.org/2000/svg" class="position-relative z-2">
+                            <defs>
+                                <clipPath id="clip-path-wedding-party-2" clipPathUnits="userSpaceOnUse">
+                                    <path d="M122.297,1714.66C65.338,1367.69 62.491,1025.7 121.909,689.455C133.944,621.346 186.621,567.793 254.384,553.949C467.534,510.404 682.471,511.129 899.109,554.011C968.605,567.767 1022.33,623.377 1032.99,693.417C1086.12,1042.51 1089.16,1384.41 1034.8,1718.06C1023.38,1788.14 968.865,1843.46 898.991,1856.1C692.267,1893.49 479.166,1890.66 260.67,1853.8C189.503,1841.8 133.988,1785.88 122.297,1714.66Z" transform="matrix(2.80689e-17,-0.457937,0.4584,2.80405e-17,-239.087,491.927)" />
+                                </clipPath>
+                            </defs>
+
+                            <foreignObject clip-path="url(#clip-path-wedding-party-2)" width="100%" height="100%">
+                                <img src="images/wedding-party-2.jpg" alt="The Groom">
+                            </foreignObject>
+                        </svg>
+                    </div>
+                    <!-- //.position-relative -->
+
+                    <h3 class="display-5 font-alt">John Wilson</h3>
+                    <p class="fs-5 fw-bold ls-2 mb-5 text-primary text-uppercase">The Groom</p>
+
+                    <ul class="list-unstyled">
+                        <li class="mb-5">
+                            <h3 class="font-alt">Jay Gatsby</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Best Man</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">Nick Carraway</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Groomsman</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">Tom Buchanan</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Groomsman</p>
+                        </li>
+
+                        <li class="mb-5">
+                            <h3 class="font-alt">George Wilson</h3>
+                            <p class="fs-10 fw-bold ls-2 m-0 text-primary-2 text-uppercase">Groomsman</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Wedding Party End -->
+
+
+    <!-- Section - Love Story Start -->
+    <section id="love-story" class="bg-holder" data-bg-image="images/bg-love-story.jpg">
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div id="carousel-love-story" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="shape-rect-content-wrapper position-relative py-5 py-sm-0 rounded-5">
+                                    <div class="shape-rect-content d-flex flex-column justify-content-center pb-5 pb-xl-0 px-4 px-sm-5 text-center">
+                                        <h3 class="font-alt">First Meet Each Other</h3>
+                                        <span class="divider divider-heart mb-4"></span>
+                                        <p class="mb-xl-4 text-body-secondary">Loise and Wilson met the modern way: by swiping right on Tinder in 2023. Their first date was a bit of a disaster-it started pouring while they were enjoying their outdoor dinner, Wilson fell into a mud puddle, and they had to wait over an hour for a subway train. However, their second date went much better.</p>
+                                        <span class="divider divider-floral d-none d-xl-block"></span>
+                                    </div>
+                                    <!-- //.shape-rect-content -->
+
+                                    <!-- SVG Image -->
+                                    <img src="img/shape-rect-content-wrapper.svg" alt="" class="d-none d-sm-block img-fluid">
+                                </div>
+                                <!-- //.shape-rect-content-wrapper -->
+                            </div>
+                            <!-- //.carousel-item -->
+
+                            <div class="carousel-item">
+                                <div class="shape-rect-content-wrapper position-relative py-5 py-sm-0 rounded-5">
+                                    <div class="shape-rect-content d-flex flex-column justify-content-center pb-5 pb-xl-0 px-4 px-sm-5 text-center">
+                                        <h3 class="font-alt">When We Go Out Together</h3>
+                                        <span class="divider divider-heart mb-4"></span>
+                                        <p class="mb-xl-4 text-body-secondary">Loise and Wilson met the modern way: by swiping right on Tinder in 2023. Their first date was a bit of a disaster-it started pouring while they were enjoying their outdoor dinner, Wilson fell into a mud puddle, and they had to wait over an hour for a subway train. However, their second date went much better.</p>
+                                        <span class="divider divider-floral d-none d-xl-block"></span>
+                                    </div>
+                                    <!-- //.shape-rect-content -->
+
+                                    <!-- SVG Image -->
+                                    <img src="img/shape-rect-content-wrapper.svg" alt="" class="d-none d-sm-block img-fluid">
+                                </div>
+                                <!-- //.shape-rect-content-wrapper -->
+                            </div>
+                            <!-- //.carousel-item -->
+
+                            <div class="carousel-item">
+                                <div class="shape-rect-content-wrapper position-relative py-5 py-sm-0 rounded-5">
+                                    <div class="shape-rect-content d-flex flex-column justify-content-center pb-5 pb-xl-0 px-4 px-sm-5 text-center">
+                                        <h3 class="font-alt">Have a Lovely Time</h3>
+                                        <span class="divider divider-heart mb-4"></span>
+                                        <p class="mb-xl-4 text-body-secondary">Loise and Wilson met the modern way: by swiping right on Tinder in 2023. Their first date was a bit of a disaster-it started pouring while they were enjoying their outdoor dinner, Wilson fell into a mud puddle, and they had to wait over an hour for a subway train. However, their second date went much better.</p>
+                                        <span class="divider divider-floral d-none d-xl-block"></span>
+                                    </div>
+                                    <!-- //.shape-rect-content -->
+
+                                    <!-- SVG Image -->
+                                    <img src="img/shape-rect-content-wrapper.svg" alt="" class="d-none d-sm-block img-fluid">
+                                </div>
+                                <!-- //.shape-rect-content-wrapper -->
+                            </div>
+                            <!-- //.carousel-item -->
+
+                            <div class="carousel-item">
+                                <div class="shape-rect-content-wrapper position-relative py-5 py-sm-0 rounded-5">
+                                    <div class="shape-rect-content d-flex flex-column justify-content-center pb-5 pb-xl-0 px-4 px-sm-5 text-center">
+                                        <h3 class="font-alt">We Fall in Love Each Other</h3>
+                                        <span class="divider divider-heart mb-4"></span>
+                                        <p class="mb-xl-4 text-body-secondary">Loise and Wilson met the modern way: by swiping right on Tinder in 2023. Their first date was a bit of a disaster-it started pouring while they were enjoying their outdoor dinner, Wilson fell into a mud puddle, and they had to wait over an hour for a subway train. However, their second date went much better.</p>
+                                        <span class="divider divider-floral d-none d-xl-block"></span>
+                                    </div>
+                                    <!-- //.shape-rect-content -->
+
+                                    <!-- SVG Image -->
+                                    <img src="img/shape-rect-content-wrapper.svg" alt="" class="d-none d-sm-block img-fluid">
+                                </div>
+                                <!-- //.shape-rect-content-wrapper -->
+                            </div>
+                            <!-- //.carousel-item -->
+                        </div>
+                        <!-- //.carousel-inner -->
+
+                        <div class="carousel-indicators align-items-center d-flex m-0 mx-auto">
+                            <img src="img/carousel-indicator-wrapper.svg" alt="" class="img-fluid position-absolute start-0 top-0">
+                        </div>
+                        <!-- //.carousel-indicators -->
+                    </div>
+                    <!-- //.carousel -->
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Love Story End -->
+
+
+    <!-- Section - Proposed Start -->
+    <section id="proposed">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">How He Proposed</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">We decide to live together, never apart, joined as one heart.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 position-relative mb-5 mb-lg-0">
+                    <div class="row justify-content-center justify-content-lg-start">
+                        <div class="col-12 col-sm-10 col-md-8 col-lg-9">
+                            <div class="position-relative z-2">
+                                <svg width="100%" height="100%" viewBox="0 0 500 685" xmlns="http://www.w3.org/2000/svg" class="position-relative z-2">
+                                    <defs>
+                                        <clipPath id="clip-path-proposed" clipPathUnits="userSpaceOnUse">
+                                            <path d="M165.836,1644.64C94.328,1209.04 90.753,779.697 165.349,357.564C180.459,272.058 246.591,204.825 331.662,187.446C599.258,132.777 869.097,133.687 1141.07,187.523C1228.32,204.794 1295.77,274.608 1309.15,362.538C1375.85,800.802 1379.67,1230.03 1311.42,1648.91C1297.09,1736.89 1228.64,1806.34 1140.92,1822.2C881.395,1869.15 613.861,1865.59 339.554,1819.32C250.208,1804.25 180.513,1734.05 165.836,1644.64Z" transform="matrix(0.399961,0,0,0.399961,-44.3128,-58.0804)" />
+                                        </clipPath>
+                                    </defs>
+
+                                    <foreignObject clip-path="url(#clip-path-proposed)" width="100%" height="100%">
+                                        <img src="images/the-couple-proposed.jpg" alt="The Couple">
+                                    </foreignObject>
+                                </svg>
+
+                                <!-- SVG Image -->
+                                <img src="img/shape-particle.svg" alt="" class="shape-particle end-0 position-absolute top-0 z-3">
+                                <img src="img/shape-rect-the-couple-2.svg" alt="" class="shape-rect shape-rect-lg bottom-0 end-0 position-absolute z-1">
+                            </div>
+                            <!-- //.position-relative -->
+                        </div>
+                        <!-- //.col-12 -->
+                    </div>
+                    <!-- //.row -->
+
+                    <!-- SVG Image -->
+                    <img src="img/shape-rect-the-couple-3.svg" alt="" class="shape-rect d-md-none d-lg-block position-absolute start-0 top-0 z-1">
+                </div>
+                <!-- //.col-lg-6 -->
+
+                <div class="col-lg-6 position-relative text-center z-2">
+                    <span class="divider divider-heart mb-4"></span>
+
+                    <div class="lead mb-4 text-body-secondary">
+                        <p>He proposed on a Scrabble board.</p>
+                        <p>He glued the letters on, spelling "LOISE WILL YOU MARRY ME", and then asked if I wanted to play the game after dinner. He had me set up the game, and of course when I opened the board, I saw the letters spelling out the proposal!</p>
+                        <p>I was so awestruck, confused and surprised at the same time as he stood there ring in hand. I framed the board and have it hanging in our home.</p>
+                    </div>
+                    <!-- //.lead -->
+
+                    <p class="font-alt fs-3 mb-4">"Yes! Yes of course! Yes!"</p>
+                    <span class="divider divider-floral mb-xl-5"></span>
+                </div>
+                <!-- //.col-lg-6 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-wave-bottom-right-1.svg" alt="" class="shape-wave shape-wave-xl bottom-0 d-none d-lg-block end-0 position-absolute z-1">
+    </section>
+    <!-- Section - Proposed End -->
+
+
+    <!-- Section - Photos Start -->
+    <section id="photos" class="border-top">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">Photo Gallery</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">Every moment in our lives is a miracle, we should enjoy instead of ignoring.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row gallery-grid">
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-1.jpg" data-gall="photos">
+                            <img src="images/photo-1.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-2.jpg" data-gall="photos">
+                            <img src="images/photo-2.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-3.jpg" data-gall="photos">
+                            <img src="images/photo-3.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-4.jpg" data-gall="photos">
+                            <img src="images/photo-4.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-5.jpg" data-gall="photos">
+                            <img src="images/photo-5.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-6.jpg" data-gall="photos">
+                            <img src="images/photo-6.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-7.jpg" data-gall="photos">
+                            <img src="images/photo-7.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+
+                <div class="col-6 col-lg-3 mb-4">
+                    <figure>
+                        <a href="images/photo-8.jpg" data-gall="photos">
+                            <img src="images/photo-8.jpg" alt="" class="img-fluid">
+                        </a>
+                    </figure>
+                </div>
+                <!-- //.col-6 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Photos End -->
+
+
+    <!-- Section - Wedding Gifts Start -->
+    <section id="wedding-gifts" class="bg-holder" data-bg-image="images/bg-wedding-gifts.jpg">
+        <div class="container">
+            <div class="row align-items-center justify-content-center justify-content-lg-start">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5">
+                    <div class="shape-rect-content-wrapper position-relative py-5 py-sm-0 rounded-5">
+                        <div class="shape-rect-content d-flex flex-column justify-content-center px-4 px-sm-5 text-center">
+                            <h3 class="font-alt">Your Presence is a Gift</h3>
+                            <span class="divider divider-heart mb-4"></span>
+
+                            <div class="mb-2 text-body-secondary">
+                                <p>You don't need to bring us gifts &mdash; your company at our wedding is enough!</p>
+                                <p>Though if you really want to, we are registered with <a href="#">Honeyfund.com</a>. Please visit this website where you can help us to have a wonderful honeymoon in Bali, Indonesia. Thank you!</p>
+                            </div>
+                            <!-- //.mb-2 -->
+
+                            <span class="divider divider-floral d-none d-xl-block"></span>
+                        </div>
+                        <!-- //.shape-rect-content -->
+
+                        <!-- SVG Image -->
+                        <img src="img/shape-rect-content-wrapper.svg" alt="" class="d-none d-sm-block img-fluid">
+                    </div>
+                    <!-- //.shape-rect-content-wrapper -->
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+    </section>
+    <!-- Section - Wedding Gifts End -->
+
+
+    <!-- Section - RSVP Start -->
+    <section id="rsvp">
+        <div class="container">
+            <div class="row mb-5 pb-lg-5">
+                <div class="col-12 position-relative text-center z-2">
+                    <h2 class="font-alt fs-1 mb-3">Come and Celebrate with Us</h2>
+                    <p class="fs-5 mb-4 text-body-secondary">If you have only one smile in you give it to the people you love.</p>
+                    <span class="divider divider-arrow"></span>
+                </div>
+                <!-- //.col-12 -->
+            </div>
+            <!-- //.row -->
+
+            <div class="row align-items-center gx-lg-5 justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mb-5">
+                    <div class="border bg-white pb-5 position-relative z-2">
+                        <h3 class="border-bottom bg-primary font-alt m-0 p-4 text-center text-white">Are You Attending?</h3>
+
+                        <form action="rsvp.php" method="post" class="bg-white p-4 position-relative">
+                            <div class="row">
+                                <div class="col-12 mb-3 position-relative">
+                                    <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required" class="border-0 border-bottom p-3 w-100" placeholder="Your Full Name">
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-3 position-relative">
+                                    <input type="email" name="rsvp_email" id="rsvp-email" data-rules="email" class="border-0 border-bottom p-3 w-100" placeholder="Your Email Address">
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-3 position-relative">
+                                    <select name="rsvp_guests" id="rsvp-guests" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                        <option value="">Number of Guests</option>
+                                        <option value="No Guests">No Guests</option>
+                                        <option value="1 Guest">1 Guest</option>
+                                        <option value="2 Guests">2 Guests</option>
+                                        <option value="3 Guests">3 Guests</option>
+                                    </select>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-3 position-relative">
+                                    <select name="rsvp_events" id="rsvp-events" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                        <option value="">What Will You Be Attending</option>
+                                        <option value="Reception &amp; Ceremony">Reception &amp; Ceremony</option>
+                                        <option value="Reception Only">Reception Only</option>
+                                        <option value="Ceremony Only">Ceremony Only</option>
+                                        <option value="Sory, Can't Make Either">Sory, Can't Make Either</option>
+                                    </select>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12 mb-4 position-relative">
+                                    <textarea name="rsvp_message" id="rsvp-message" class="border-0 border-bottom p-3 w-100" rows="4" placeholder="Dietary Restrictions"></textarea>
+                                </div>
+                                <!-- //.col-12 -->
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn mx-auto">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                                <!-- //.col-12 -->
+                            </div>
+                            <!-- //.row -->
+
+                            <!-- SVG Image -->
+                            <img src="img/shape-heart-balloon-mrs.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block position-absolute start-0 z-2">
+                            <img src="img/shape-heart-balloon-mr.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block end-0 position-absolute translate-middle-y z-2">
+                        </form>
+                    </div>
+                    <!-- //.border -->
+                </div>
+                <!-- //.col-sm-10 -->
+
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 mb-lg-5 offset-xl-1 text-center">
+                    <h3 class="font-alt">We Can't Wait to See You!</h3>
+                    <span class="divider divider-heart mb-4"></span>
+                    <p class="text-body-secondary">Saturday, July 11th, 2026</p>
+                    <p class="mb-4 text-body-secondary">St. Patrick's Catholic Church, 619 10th Street NW, Washington, DC 20001, United States</p>
+                    <span class="divider divider-floral"></span>
+                </div>
+                <!-- //.col-sm-10 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-wave-top-left-2.svg" alt="" class="shape-wave d-none d-lg-block position-absolute start-0 top-0 z-1">
+        <img src="img/shape-wave-middle-right.svg" alt="" class="shape-wave shape-wave-xs d-none d-lg-block end-0 mb-5 position-absolute top-50 translate-middle-y z-1">
+    </section>
+    <!-- Section - RSVP End -->
+
+
+    <!-- Footer Start -->
+    <footer class="bg-secondary-2 pb-0 section">
+        <div class="container">
+            <div class="row align-items-center gx-md-5 justify-content-center">
+                <div class="col-md-6 col-xl-5 mb-5 position-relative text-center text-md-start z-2">
+                    <h2 class="font-alt fs-1 mb-3">Spread The Love</h2>
+                    <p class="fs-5 m-0 text-body-secondary">Use <span class="text-primary">#LoiseWilsonWedding</span> on instagram to help us share our special day.</p>
+                </div>
+                <!-- //.col-md-6 -->
+
+                <div class="col-10 col-md-6 col-xl-4">
+                    <div class="position-relative">
+                        <img src="images/the-couple-rsvp.jpg" alt="" class="bottom-0 img-fluid position-absolute px-3 start-50 translate-middle-x z-1">
+                        <img src="img/instagram.png" alt="" class="img-fluid position-relative z-2">
+                    </div>
+                    <!-- //.position-relative -->
+                </div>
+                <!-- //.col-10 -->
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.container -->
+
+        <!-- SVG Image -->
+        <img src="img/shape-wave-top-left-1.svg" alt="" class="shape-wave shape-wave-sm d-none d-lg-block mt-5 position-absolute start-0 top-0 z-1">
+        <img src="img/shape-wave-bottom-right-2.svg" alt="" class="shape-wave bottom-0 d-none d-lg-block end-0 position-absolute z-3">
+    </footer>
+    <!-- Footer End -->
+
+
+    <!-- Required JS files -->
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
