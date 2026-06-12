@@ -508,93 +508,57 @@
     <script src="js/script.min.js"></script>
 
     <script>
-        // ============================================================
-        // CONFIGURACIÓN — cambia estos 3 valores con los tuyos
-        // ============================================================
-        const AIRTABLE_TOKEN = "patiNqTYXA5LbhWzo.c4572904879a8171f10765436dc6b7d9219c361a6796e1a3dc9ed082949f8729";        // El token que copiaste
-        const AIRTABLE_BASE_ID = "appHE8fn5zPVavdot/tbllJcqEseWbPRCVU/viwGPfL45BnLavLnS?blocks=hide";    // El ID de tu base
-        const AIRTABLE_TABLE_NAME = "RSVP_Boda-Eli";            // Nombre exacto de tu tabla
-        // ============================================================
+        const WORKER_URL = 'https://rsvp-belart.bellartestudiografico.workers.dev';
 
-        document.getElementById("rsvp-form").addEventListener("submit", async function (e) {
+        document.getElementById('rsvp-form').addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            // --- Limpiar errores previos ---
-            document.querySelectorAll(".rsvp-error").forEach(el => el.style.display = "none");
-            document.getElementById("rsvp-success").style.display = "none";
-            document.getElementById("rsvp-error-general").style.display = "none";
+            document.querySelectorAll('.rsvp-error').forEach(el => el.style.display = 'none');
+            document.getElementById('rsvp-success').style.display = 'none';
+            document.getElementById('rsvp-error-general').style.display = 'none';
 
-            // --- Obtener valores ---
-            const nombre = document.getElementById("rsvp-name").value.trim();
-            const email = document.getElementById("rsvp-email").value.trim();
-            const invitados = document.getElementById("rsvp-guests").value;
-            const evento = document.getElementById("rsvp-events").value;
-            const mensaje = document.getElementById("rsvp-message").value.trim();
+            const nombre = document.getElementById('rsvp-name').value.trim();
+            const email = document.getElementById('rsvp-email').value.trim();
+            const invitados = document.getElementById('rsvp-guests').value;
+            const evento = document.getElementById('rsvp-events').value;
+            const mensaje = document.getElementById('rsvp-message').value.trim();
 
-            // --- Validación ---
             let hayErrores = false;
-
-            if (!nombre) {
-                document.getElementById("error-name").style.display = "block";
-                hayErrores = true;
-            }
-            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                document.getElementById("error-email").style.display = "block";
-                hayErrores = true;
-            }
-            if (!invitados) {
-                document.getElementById("error-guests").style.display = "block";
-                hayErrores = true;
-            }
-            if (!evento) {
-                document.getElementById("error-events").style.display = "block";
-                hayErrores = true;
-            }
-
+            if (!nombre) { document.getElementById('error-name').style.display = 'block'; hayErrores = true; }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('error-email').style.display = 'block'; hayErrores = true; }
+            if (!invitados) { document.getElementById('error-guests').style.display = 'block'; hayErrores = true; }
+            if (!evento) { document.getElementById('error-events').style.display = 'block'; hayErrores = true; }
             if (hayErrores) return;
 
-            // --- Cambiar estado del botón ---
-            const btn = document.getElementById("rsvp-btn");
-            const btnText = document.getElementById("rsvp-btn-text");
+            const btn = document.getElementById('rsvp-btn');
+            const btnText = document.getElementById('rsvp-btn-text');
             btn.disabled = true;
-            btnText.textContent = "Enviando...";
+            btnText.textContent = 'Enviando...';
 
-            // --- Enviar a Airtable ---
             try {
-                const respuesta = await fetch(
-                    `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`,
-                    {
-                        method: "POST",
-                        headers: {
-                            "Authorization": `Bearer ${AIRTABLE_TOKEN}`,
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            fields: {
-                                "Nombre": nombre,
-                                "Email": email,
-                                "Invitados": invitados,
-                                "Asistencia": evento,
-                                "Mensaje": mensaje
-                            }
-                        })
-                    }
-                );
+                const respuesta = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        Nombre: nombre,
+                        Email: email,
+                        Invitados: invitados,
+                        Asistencia: evento,
+                        Mensaje: mensaje,
+                    }),
+                });
 
                 if (respuesta.ok) {
-                    // Éxito: mostrar mensaje y limpiar formulario
-                    document.getElementById("rsvp-success").style.display = "block";
-                    document.getElementById("rsvp-form").reset();
-                    btn.disabled = false;
-                    btnText.textContent = "Enviar";
+                    document.getElementById('rsvp-success').style.display = 'block';
+                    document.getElementById('rsvp-form').reset();
                 } else {
-                    throw new Error("Error en la respuesta de Airtable");
+                    throw new Error('Error en el servidor');
                 }
-
             } catch (error) {
-                document.getElementById("rsvp-error-general").style.display = "block";
+                document.getElementById('rsvp-error-general').style.display = 'block';
+            } finally {
                 btn.disabled = false;
-                btnText.textContent = "Enviar";
+                btnText.textContent = 'Enviar';
             }
         });
     </script>
