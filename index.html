@@ -31,7 +31,8 @@
                     <img width="187" height="73" src="img/navbar-brand-mobile.png" alt="Logo">
                 </div>
 
-                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+                <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -52,7 +53,8 @@
                     </ul>
 
                     <div class="navbar-brand d-none d-lg-block mx-3 mx-xl-4 position-relative text-center">
-                        <img width="180" height="123" src="img/navbar-brand.png" alt="Logo" class="mt-4 position-absolute start-0 top-0">
+                        <img width="180" height="123" src="img/navbar-brand.png" alt="Logo"
+                            class="mt-4 position-absolute start-0 top-0">
                     </div>
 
                     <ul class="navbar-nav">
@@ -125,7 +127,8 @@
                     <h3 class="font-alt">Eli</h3>
 
                     <p class="text-body-secondary">
-                        Soy la persona más feliz del mundo porque encontré en José Luis a mi mejor amigo y al amor de mi vida.
+                        Soy la persona más feliz del mundo porque encontré en José Luis a mi mejor amigo y al amor de mi
+                        vida.
                     </p>
                 </div>
 
@@ -237,7 +240,8 @@
                         <h3 class="font-alt">Así Nos Conocimos</h3>
 
                         <p class="text-body-secondary">
-                            Eli y José Luis se conocieron hace dos años en una reunión con amigos en el centro de Puebla.
+                            Eli y José Luis se conocieron hace dos años en una reunión con amigos en el centro de
+                            Puebla.
                         </p>
                     </div>
 
@@ -245,7 +249,8 @@
                         <h3 class="font-alt">Nuestro Amor</h3>
 
                         <p class="text-body-secondary">
-                            Entre cafés, paseos y largas conversaciones, descubrieron que estaban hechos el uno para el otro.
+                            Entre cafés, paseos y largas conversaciones, descubrieron que estaban hechos el uno para el
+                            otro.
                         </p>
                     </div>
 
@@ -384,56 +389,88 @@
                             ¿Confirmas tu asistencia?
                         </h3>
 
-                        <form action="rsvp.php" method="post" class="bg-white p-4 position-relative">
+                        <form id="rsvp-form" class="bg-white p-4 position-relative">
                             <div class="row">
                                 <div class="col-12 mb-3 position-relative">
-                                    <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required" class="border-0 border-bottom p-3 w-100" placeholder="Nombre completo">
+                                    <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required"
+                                        class="border-0 border-bottom p-3 w-100" placeholder="Nombre completo">
+                                    <div class="rsvp-error text-danger small mt-1" id="error-name"
+                                        style="display:none;">
+                                        Por favor ingresa tu nombre
+                                    </div>
                                 </div>
-                                <!-- //.col-12 -->
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <input type="email" name="rsvp_email" id="rsvp-email" data-rules="email" class="border-0 border-bottom p-3 w-100" placeholder="Tu dirección de correo">
+                                    <input type="email" name="rsvp_email" id="rsvp-email" data-rules="email"
+                                        class="border-0 border-bottom p-3 w-100" placeholder="Tu dirección de correo">
+                                    <div class="rsvp-error text-danger small mt-1" id="error-email"
+                                        style="display:none;">
+                                        Por favor ingresa un correo válido
+                                    </div>
                                 </div>
-                                <!-- //.col-12 -->
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <select name="rsvp_guests" id="rsvp-guests" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                    <select name="rsvp_guests" id="rsvp-guests" data-rules="required"
+                                        class="border-0 border-bottom p-3 w-100">
                                         <option value="">Numero de invitados</option>
-                                        <option value="1 Guest">1 Invitado</option>
-                                        <option value="2 Guests">2 Invitados</option>
-                                        <option value="3 Guests">3 Invitados</option>
+                                        <option value="1 Invitado">1 Invitado</option>
+                                        <option value="2 Invitados">2 Invitados</option>
+                                        <option value="3 Invitados">3 Invitados</option>
                                     </select>
+                                    <div class="rsvp-error text-danger small mt-1" id="error-guests"
+                                        style="display:none;">
+                                        Por favor selecciona el número de invitados
+                                    </div>
                                 </div>
-                                <!-- //.col-12 -->
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <select name="rsvp_events" id="rsvp-events" data-rules="required" class="border-0 border-bottom p-3 w-100">
+                                    <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                        class="border-0 border-bottom p-3 w-100">
                                         <option value="">¿A qué vas a asistir?</option>
-                                        <option value="Reception &amp; Ceremony">Recepción &amp; Ceremonia</option>
-                                        <option value="Reception Only">Sólo Recepción</option>
-                                        <option value="Ceremony Only">Sólo Ceremonia</option>
-                                        <option value="Sory, Can't Make Either">Lo siento, no puedo ir a ninguno de los dos</option>
+                                        <option value="Recepción y Ceremonia">Recepción &amp; Ceremonia</option>
+                                        <option value="Sólo Recepción">Sólo Recepción</option>
+                                        <option value="Sólo Ceremonia">Sólo Ceremonia</option>
+                                        <option value="No puedo asistir">Lo siento, no puedo ir</option>
                                     </select>
+                                    <div class="rsvp-error text-danger small mt-1" id="error-events"
+                                        style="display:none;">
+                                        Por favor indica a qué evento asistirás
+                                    </div>
                                 </div>
-                                <!-- //.col-12 -->
 
                                 <div class="col-12 mb-4 position-relative">
-                                    <textarea name="rsvp_message" id="rsvp-message" class="border-0 border-bottom p-3 w-100" rows="4" placeholder="Restricciones alimentarias"></textarea>
+                                    <textarea name="rsvp_message" id="rsvp-message"
+                                        class="border-0 border-bottom p-3 w-100" rows="4"
+                                        placeholder="Restricciones alimentarias"></textarea>
                                 </div>
-                                <!-- //.col-12 -->
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn mx-auto">
-                                        <span>Enviar</span>
+                                    <button type="submit" class="btn mx-auto" id="rsvp-btn">
+                                        <span id="rsvp-btn-text">Enviar</span>
                                     </button>
                                 </div>
-                                <!-- //.col-12 -->
-                            </div>
-                            <!-- //.row -->
 
-                            <!-- SVG Image -->
-                            <img src="img/shape-heart-balloon-mrs.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block position-absolute start-0 z-2">
-                            <img src="img/shape-heart-balloon-mr.svg" alt="" class="shape-heart-balloon bottom-0 d-none d-sm-block end-0 position-absolute translate-middle-y z-2">
+                                <!-- Mensaje de éxito (oculto al inicio) -->
+                                <div class="col-12 mt-3" id="rsvp-success" style="display:none;">
+                                    <div class="alert alert-success text-center">
+                                        ¡Gracias por confirmar tu asistencia! 🎉<br>
+                                        Nos vemos pronto.
+                                    </div>
+                                </div>
+
+                                <!-- Mensaje de error (oculto al inicio) -->
+                                <div class="col-12 mt-3" id="rsvp-error-general" style="display:none;">
+                                    <div class="alert alert-danger text-center">
+                                        Hubo un problema al enviar. Por favor intenta de nuevo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- SVG decorativos originales -->
+                            <img src="img/shape-heart-balloon-mrs.svg" alt=""
+                                class="shape-heart-balloon bottom-0 d-none d-sm-block position-absolute start-0 z-2">
+                            <img src="img/shape-heart-balloon-mr.svg" alt=""
+                                class="shape-heart-balloon bottom-0 d-none d-sm-block end-0 position-absolute translate-middle-y z-2">
                         </form>
                     </div>
                 </div>
@@ -454,7 +491,8 @@
                     <h2 class="font-alt fs-1 mb-3">Comparte Nuestro Día</h2>
 
                     <p class="fs-5 m-0 text-body-secondary">
-                        Usa <span class="text-primary">#BodaEliyJoseLuis</span> en Instagram para compartir nuestros mejores momentos.
+                        Usa <span class="text-primary">#BodaEliyJoseLuis</span> en Instagram para compartir nuestros
+                        mejores momentos.
                     </p>
 
                 </div>
@@ -468,6 +506,98 @@
     </footer>
 
     <script src="js/script.min.js"></script>
+
+    <script>
+        // ============================================================
+        // CONFIGURACIÓN — cambia estos 3 valores con los tuyos
+        // ============================================================
+        const AIRTABLE_TOKEN = "patiNqTYXA5LbhWzo.c4572904879a8171f10765436dc6b7d9219c361a6796e1a3dc9ed082949f8729";        // El token que copiaste
+        const AIRTABLE_BASE_ID = "appHE8fn5zPVavdot/tbllJcqEseWbPRCVU/viwGPfL45BnLavLnS?blocks=hide";    // El ID de tu base
+        const AIRTABLE_TABLE_NAME = "RSVP_Boda-Eli";            // Nombre exacto de tu tabla
+        // ============================================================
+
+        document.getElementById("rsvp-form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // --- Limpiar errores previos ---
+            document.querySelectorAll(".rsvp-error").forEach(el => el.style.display = "none");
+            document.getElementById("rsvp-success").style.display = "none";
+            document.getElementById("rsvp-error-general").style.display = "none";
+
+            // --- Obtener valores ---
+            const nombre = document.getElementById("rsvp-name").value.trim();
+            const email = document.getElementById("rsvp-email").value.trim();
+            const invitados = document.getElementById("rsvp-guests").value;
+            const evento = document.getElementById("rsvp-events").value;
+            const mensaje = document.getElementById("rsvp-message").value.trim();
+
+            // --- Validación ---
+            let hayErrores = false;
+
+            if (!nombre) {
+                document.getElementById("error-name").style.display = "block";
+                hayErrores = true;
+            }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("error-email").style.display = "block";
+                hayErrores = true;
+            }
+            if (!invitados) {
+                document.getElementById("error-guests").style.display = "block";
+                hayErrores = true;
+            }
+            if (!evento) {
+                document.getElementById("error-events").style.display = "block";
+                hayErrores = true;
+            }
+
+            if (hayErrores) return;
+
+            // --- Cambiar estado del botón ---
+            const btn = document.getElementById("rsvp-btn");
+            const btnText = document.getElementById("rsvp-btn-text");
+            btn.disabled = true;
+            btnText.textContent = "Enviando...";
+
+            // --- Enviar a Airtable ---
+            try {
+                const respuesta = await fetch(
+                    `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE_NAME)}`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Authorization": `Bearer ${AIRTABLE_TOKEN}`,
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            fields: {
+                                "Nombre": nombre,
+                                "Email": email,
+                                "Invitados": invitados,
+                                "Asistencia": evento,
+                                "Mensaje": mensaje
+                            }
+                        })
+                    }
+                );
+
+                if (respuesta.ok) {
+                    // Éxito: mostrar mensaje y limpiar formulario
+                    document.getElementById("rsvp-success").style.display = "block";
+                    document.getElementById("rsvp-form").reset();
+                    btn.disabled = false;
+                    btnText.textContent = "Enviar";
+                } else {
+                    throw new Error("Error en la respuesta de Airtable");
+                }
+
+            } catch (error) {
+                document.getElementById("rsvp-error-general").style.display = "block";
+                btn.disabled = false;
+                btnText.textContent = "Enviar";
+            }
+        });
+    </script>
 
 </body>
 
