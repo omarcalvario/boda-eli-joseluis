@@ -445,7 +445,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn mx-auto" id="rsvp-btn">
+                                    <button type="button" class="btn mx-auto" id="rsvp-btn">
                                         <span id="rsvp-btn-text">Enviar</span>
                                     </button>
                                 </div>
@@ -510,8 +510,7 @@
     <script>
         const WORKER_URL = 'https://rsvp-belart.bellartestudiografico.workers.dev';
 
-        document.getElementById('rsvp-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
+        document.getElementById('rsvp-btn').addEventListener('click', async function () {
 
             document.querySelectorAll('.rsvp-error').forEach(el => el.style.display = 'none');
             document.getElementById('rsvp-success').style.display = 'none';
@@ -525,7 +524,9 @@
 
             let hayErrores = false;
             if (!nombre) { document.getElementById('error-name').style.display = 'block'; hayErrores = true; }
-            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('error-email').style.display = 'block'; hayErrores = true; }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('error-email').style.display = 'block'; hayErrores = true;
+            }
             if (!invitados) { document.getElementById('error-guests').style.display = 'block'; hayErrores = true; }
             if (!evento) { document.getElementById('error-events').style.display = 'block'; hayErrores = true; }
             if (hayErrores) return;
@@ -552,7 +553,7 @@
                     document.getElementById('rsvp-success').style.display = 'block';
                     document.getElementById('rsvp-form').reset();
                 } else {
-                    throw new Error('Error en el servidor');
+                    throw new Error('Error del servidor');
                 }
             } catch (error) {
                 document.getElementById('rsvp-error-general').style.display = 'block';
