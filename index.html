@@ -13,11 +13,128 @@
     <meta name="description" content="Boda Eli y José Luis">
     <meta name="keywords" content="Boda, Eli, José Luis, Puebla">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
 
     <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="img/favicon-16x16.png" sizes="16x16" type="image/png">
     <link rel="icon" href="img/favicon.ico">
+    <!-- ESTILOS CONTADOR CUENTA REGRESIVA -->
+    <style>
+        .countdown-container {
+            background-color: #E7A37B;
+            padding: 22px 16px;
+            border-radius: 0;
+            width: 100%;
+        }
+
+        .countdown-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.9rem;
+            color: #FBF6F3;
+            text-align: center;
+            margin-bottom: 14px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .countdown-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: nowrap;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+            flex: 1;
+        }
+
+        .countdown-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #FBF6F3;
+            line-height: 1;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.12);
+        }
+
+        .countdown-label {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 0.7rem;
+            color: #FBF6F3;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 6px;
+            opacity: 0.9;
+        }
+
+        .countdown-separator {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #FBF6F3;
+            opacity: 0.65;
+            line-height: 1;
+            padding-bottom: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 576px) {
+            .countdown-container {
+                padding: 18px 10px;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .countdown-item {
+                min-width: 48px;
+            }
+
+            .countdown-label {
+                font-size: 0.6rem;
+                letter-spacing: 1px;
+            }
+
+            .countdown-separator {
+                font-size: 1.4rem;
+                padding-bottom: 14px;
+            }
+
+            .countdown-title {
+                font-size: 0.8rem;
+                letter-spacing: 3px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .countdown-number {
+                font-size: 1.6rem;
+            }
+
+            .countdown-item {
+                min-width: 38px;
+            }
+
+            .countdown-label {
+                font-size: 0.55rem;
+            }
+
+            .countdown-separator {
+                font-size: 1.1rem;
+                padding-bottom: 10px;
+            }
+        }
+    </style>
+
 </head>
 
 <body id="page-top" class="h-100 overflow-x-hidden w-100">
@@ -90,9 +207,35 @@
 
                     <h3 class="fs-1 font-alt mb-3">Junto con sus familias</h3>
 
-                    <p class="lead mb-5 text-body-secondary">
+                    <p class="lead mb-4 text-body-secondary">
                         Tenemos el honor de invitarlos a celebrar nuestra boda el 21 de Noviembre de 2020
                     </p>
+
+                    <!-- CONTADOR CUENTA REGRESIVA -->
+                    <div class="countdown-container mb-5 mx-auto" style="max-width: 520px;">
+                        <p class="countdown-title">Faltan</p>
+                        <div class="countdown-wrapper" id="countdown">
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="days">00</span>
+                                <span class="countdown-label">Días</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="hours">00</span>
+                                <span class="countdown-label">Horas</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="minutes">00</span>
+                                <span class="countdown-label">Minutos</span>
+                            </div>
+                            <div class="countdown-separator">:</div>
+                            <div class="countdown-item">
+                                <span class="countdown-number" id="seconds">00</span>
+                                <span class="countdown-label">Segundos</span>
+                            </div>
+                        </div>
+                    </div>
 
                     <span class="divider divider-arrow"></span>
                 </div>
@@ -561,6 +704,39 @@
                 btnText.textContent = 'Enviar';
             }
         });
+    </script>
+
+
+    <!-- SCRIPT CONTADOR CUENTA REGRESIVA -->
+    <script>
+        // Fecha objetivo: 21 de Noviembre de 2026 a las 11:00 AM (hora de la boda civil)
+        const targetDate = new Date("2026-11-21T11:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 
 </body>
