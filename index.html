@@ -535,7 +535,7 @@
                         <form id="rsvp-form" class="bg-white p-4 position-relative">
                             <div class="row">
                                 <div class="col-12 mb-3 position-relative">
-                                    <input type="text" name="rsvp_name" id="rsvp-name" data-rules="required"
+                                    <input type="text" name="rsvp_name" id="rsvp-name"
                                         class="border-0 border-bottom p-3 w-100" placeholder="Nombre completo">
                                     <div class="rsvp-error text-danger small mt-1" id="error-name"
                                         style="display:none;">
@@ -544,7 +544,7 @@
                                 </div>
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <input type="email" name="rsvp_email" id="rsvp-email" data-rules="email"
+                                    <input type="email" name="rsvp_email" id="rsvp-email"
                                         class="border-0 border-bottom p-3 w-100" placeholder="Tu dirección de correo">
                                     <div class="rsvp-error text-danger small mt-1" id="error-email"
                                         style="display:none;">
@@ -553,7 +553,7 @@
                                 </div>
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <select name="rsvp_guests" id="rsvp-guests" data-rules="required"
+                                    <select name="rsvp_guests" id="rsvp-guests"
                                         class="border-0 border-bottom p-3 w-100">
                                         <option value="">Numero de invitados</option>
                                         <option value="1 Invitado">1 Invitado</option>
@@ -567,7 +567,7 @@
                                 </div>
 
                                 <div class="col-12 mb-3 position-relative">
-                                    <select name="rsvp_events" id="rsvp-events" data-rules="required"
+                                    <select name="rsvp_events" id="rsvp-events"
                                         class="border-0 border-bottom p-3 w-100">
                                         <option value="">¿A qué vas a asistir?</option>
                                         <option value="Recepción y Ceremonia">Recepción &amp; Ceremonia</option>
@@ -588,7 +588,7 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <button type="submit" class="btn mx-auto" id="rsvp-btn">
+                                    <button type="button" class="btn mx-auto" id="rsvp-btn">
                                         <span id="rsvp-btn-text">Enviar</span>
                                     </button>
                                 </div>
@@ -653,8 +653,7 @@
     <script>
         const WORKER_URL = 'https://rsvp-belart.bellartestudiografico.workers.dev';
 
-        document.getElementById('rsvp-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
+        document.getElementById('rsvp-btn').addEventListener('click', async function () {
 
             document.querySelectorAll('.rsvp-error').forEach(el => el.style.display = 'none');
             document.getElementById('rsvp-success').style.display = 'none';
@@ -668,7 +667,9 @@
 
             let hayErrores = false;
             if (!nombre) { document.getElementById('error-name').style.display = 'block'; hayErrores = true; }
-            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('error-email').style.display = 'block'; hayErrores = true; }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById('error-email').style.display = 'block'; hayErrores = true;
+            }
             if (!invitados) { document.getElementById('error-guests').style.display = 'block'; hayErrores = true; }
             if (!evento) { document.getElementById('error-events').style.display = 'block'; hayErrores = true; }
             if (hayErrores) return;
@@ -695,7 +696,7 @@
                     document.getElementById('rsvp-success').style.display = 'block';
                     document.getElementById('rsvp-form').reset();
                 } else {
-                    throw new Error('Error en el servidor');
+                    throw new Error('Error del servidor');
                 }
             } catch (error) {
                 document.getElementById('rsvp-error-general').style.display = 'block';
