@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Álbum de Eli & José Luis</title>
+    <meta name="description" content="Comparte y disfruta las fotografías de la boda de Eli y José Luis.">
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/album.css">
+</head>
+<body class="album-page">
+    <div class="album-shell">
+        <header class="album-header">
+            <div class="album-header-inner">
+                <div>
+                    <p class="album-kicker">Álbum colaborativo</p>
+                    <h1 class="album-brand">Eli &amp; José Luis</h1>
+                </div>
+                <nav class="album-nav" aria-label="Navegación del álbum">
+                    <a class="album-link" href="index.html">Volver a la boda</a>
+                    <button class="album-button secondary" id="share-button" type="button">Compartir galería</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="album-main">
+            <section class="album-hero" aria-labelledby="album-title">
+                <div>
+                    <p class="album-kicker">Nuestros recuerdos, juntos</p>
+                    <h2 id="album-title">Cada mirada merece quedarse.</h2>
+                    <p id="album-message">Comparte las fotografías que tomes hoy. Después de procesarlas, aparecerán en este álbum para todos.</p>
+                    <div class="album-actions">
+                        <a class="album-button" href="#upload">Subir fotografías</a>
+                        <a class="album-button secondary" href="projection.html">Abrir proyección</a>
+                    </div>
+                </div>
+                <div class="album-hero-art">
+                    <img src="images/the-couple-hero.jpg" alt="Eli y José Luis" width="900" height="675">
+                </div>
+            </section>
+
+            <section aria-labelledby="gallery-title">
+                <div class="album-section-heading">
+                    <h3 id="gallery-title">El día, visto por ustedes</h3>
+                    <span class="album-count" id="photo-count" aria-live="polite">Cargando fotografías…</span>
+                </div>
+                <p class="album-status" id="gallery-status" role="status"></p>
+                <div class="album-grid" id="gallery-grid"></div>
+            </section>
+
+            <section class="album-upload" id="upload" aria-labelledby="upload-title">
+                <h3 id="upload-title">Comparte tu momento</h3>
+                <p>Sin cuentas, nombres ni formularios. Selecciona una foto o toma una nueva desde tu teléfono.</p>
+                <div class="album-upload-controls">
+                    <label class="album-file-label" for="camera-input">Tomar foto</label>
+                    <input class="album-file-input" id="camera-input" type="file" accept="image/*" capture="environment">
+                    <label class="album-file-label" for="gallery-input">Elegir de galería</label>
+                    <input class="album-file-input" id="gallery-input" type="file" accept="image/*" multiple>
+                    <button class="album-button" id="upload-button" type="button" disabled>Subir fotografías</button>
+                </div>
+                <div class="album-progress" aria-hidden="true"><div class="album-progress-bar" id="upload-progress"></div></div>
+                <p class="album-status" id="upload-status" role="status"></p>
+                <div class="album-queue" id="upload-queue" aria-live="polite"></div>
+            </section>
+        </main>
+    </div>
+
+    <dialog class="album-lightbox" id="lightbox" aria-label="Fotografía ampliada">
+        <button class="album-lightbox-close" id="lightbox-close" type="button" aria-label="Cerrar fotografía">×</button>
+        <img id="lightbox-image" alt="">
+    </dialog>
+    <script type="module" src="js/album.js"></script>
+</body>
+</html>

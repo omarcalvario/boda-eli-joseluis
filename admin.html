@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administración | Álbum Eli &amp; José Luis</title>
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="css/album.css">
+</head>
+<body class="admin-page">
+    <main class="admin-main">
+        <section class="admin-panel admin-login" id="login-panel" aria-labelledby="login-title">
+            <p class="album-kicker">Álbum colaborativo</p>
+            <h1 class="admin-title" id="login-title">Administración</h1>
+            <p>Recibe un enlace seguro en el correo de tu cuenta de administrador.</p>
+            <form class="admin-form" id="login-form">
+                <label class="admin-label" for="login-email">Correo electrónico
+                    <input class="admin-input" id="login-email" type="email" autocomplete="email" required>
+                </label>
+                <button class="album-button" type="submit">Enviar enlace de acceso</button>
+            </form>
+            <p class="album-status" id="login-status" role="status"></p>
+        </section>
+
+        <section id="dashboard" hidden>
+            <div class="admin-toolbar">
+                <div>
+                    <p class="album-kicker">Panel del evento</p>
+                    <h1 class="admin-title">Eli &amp; José Luis</h1>
+                </div>
+                <div class="album-actions">
+                    <a class="album-button secondary" href="album.html">Ver galería</a>
+                    <a class="album-button secondary" href="projection.html" target="_blank" rel="noopener">Abrir proyección</a>
+                    <button class="album-button secondary" id="share-admin-button" type="button">Compartir</button>
+                    <button class="album-button secondary" id="logout-button" type="button">Cerrar sesión</button>
+                </div>
+            </div>
+            <p class="album-status" id="admin-status" role="status"></p>
+            <div class="admin-stats" aria-label="Contadores">
+                <div class="admin-stat"><strong id="stat-total">0</strong><span>Total</span></div>
+                <div class="admin-stat"><strong id="stat-pending">0</strong><span>Pendientes</span></div>
+                <div class="admin-stat"><strong id="stat-approved">0</strong><span>Aprobadas</span></div>
+                <div class="admin-stat"><strong id="stat-rejected">0</strong><span>Rechazadas</span></div>
+            </div>
+
+            <div class="admin-grid">
+                <section class="admin-panel" aria-labelledby="moderation-title">
+                    <div class="admin-toolbar">
+                        <h2 class="album-section-heading" id="moderation-title">Moderación</h2>
+                        <label class="admin-label" for="photo-filter">Mostrar
+                            <select class="admin-select" id="photo-filter">
+                                <option value="pending">Pendientes</option>
+                                <option value="approved">Aprobadas</option>
+                                <option value="rejected">Rechazadas</option>
+                                <option value="all">Todas</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="admin-photo-list" id="photo-list"></div>
+                </section>
+
+                <aside>
+                    <section class="admin-panel admin-settings" aria-labelledby="settings-title">
+                        <h2 id="settings-title">Configuración</h2>
+                        <label class="admin-label" for="event-name">Nombre del evento
+                            <input class="admin-input" id="event-name" type="text">
+                        </label>
+                        <label class="admin-label" for="event-date">Fecha del evento
+                            <input class="admin-input" id="event-date" type="datetime-local">
+                        </label>
+                        <label class="admin-label" for="event-status">Estado del evento
+                            <select class="admin-select" id="event-status">
+                                <option value="draft">Borrador</option>
+                                <option value="active">Activo</option>
+                                <option value="closed">Cerrado</option>
+                                <option value="archived">Archivado</option>
+                            </select>
+                        </label>
+                        <button class="album-button" id="save-event" type="button">Guardar evento</button>
+                        <label class="admin-label" for="publication-mode">Publicación
+                            <select class="admin-select" id="publication-mode">
+                                <option value="manual">Revisar antes de publicar</option>
+                                <option value="automatic">Publicar automáticamente</option>
+                            </select>
+                        </label>
+                        <label class="admin-label" for="share-message">Mensaje del álbum
+                            <textarea class="admin-input" id="share-message" rows="3"></textarea>
+                        </label>
+                        <label class="admin-label" for="max-file-size">Tamaño máximo por fotografía (MiB, hasta 10)
+                            <input class="admin-input" id="max-file-size" type="number" min="0.001" max="10" step="0.1" required>
+                        </label>
+                        <label class="admin-label" for="max-files-per-upload">Fotografías máximas por envío
+                            <input class="admin-input" id="max-files-per-upload" type="number" min="1" max="20" step="1" required>
+                        </label>
+                        <fieldset class="admin-format-options" id="allowed-types-fieldset">
+                            <legend>Formatos permitidos (solo owner)</legend>
+                            <label><input type="checkbox" name="allowed-mime-type" value="image/jpeg"> JPEG</label>
+                            <label><input type="checkbox" name="allowed-mime-type" value="image/png"> PNG</label>
+                            <label><input type="checkbox" name="allowed-mime-type" value="image/webp"> WebP</label>
+                        </fieldset>
+                        <button class="album-button" id="save-settings" type="button">Guardar configuración</button>
+                        <p class="album-status" id="settings-status" role="status"></p>
+                    </section>
+
+                    <section class="admin-panel" aria-labelledby="qr-title">
+                        <h2 id="qr-title">Código QR</h2>
+                        <p>Imprime este código para que tus invitados abran el álbum.</p>
+                        <div class="admin-qr" id="qr-container" role="img" aria-label="Código QR del álbum" hidden></div>
+                        <button class="album-button" id="show-qr" type="button">Mostrar QR</button>
+                        <button class="album-button secondary" id="download-qr" type="button" hidden>Descargar QR</button>
+                        <button class="album-button secondary" id="print-qr" type="button" hidden>Imprimir QR</button>
+                    </section>
+
+                    <section class="admin-panel" id="admins-panel" aria-labelledby="admins-title" hidden>
+                        <h2 id="admins-title">Administradores</h2>
+                        <form class="admin-form" id="admin-form">
+                            <label class="admin-label" for="admin-email">Correo
+                                <input class="admin-input" id="admin-email" type="email" required>
+                            </label>
+                            <label class="admin-label" for="admin-role">Rol
+                                <select class="admin-select" id="admin-role">
+                                    <option value="admin">Admin</option>
+                                    <option value="moderator">Moderator</option>
+                                </select>
+                            </label>
+                            <button class="album-button" type="submit">Agregar acceso</button>
+                        </form>
+                        <div id="admin-list"></div>
+                        <p class="album-status" id="admins-status" role="status"></p>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>
